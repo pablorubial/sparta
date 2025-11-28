@@ -438,7 +438,7 @@ template < int NEARCP, int GASTALLY > void Collide::collisions_one()
 
     ip = cinfo[icell].first;
     volume = cinfo[icell].volume / cinfo[icell].weight;
-    if (volume == 0.0) error->one(FLERR,"Collision cell volume is zero");
+    if (volume == 0.0) continue;
 
     // setup particle list for this cell
 
@@ -589,7 +589,7 @@ template < int NEARCP, int GASTALLY > void Collide::collisions_group()
 
     ip = cinfo[icell].first;
     volume = cinfo[icell].volume / cinfo[icell].weight;
-    if (volume == 0.0) error->one(FLERR,"Collision cell volume is zero");
+    if (volume == 0.0) continue;
 
     // reallocate plist and p2g if necessary
 
@@ -877,7 +877,7 @@ template < int GASTALLY > void Collide::collisions_one_ambipolar()
 
     ip = cinfo[icell].first;
     volume = cinfo[icell].volume / cinfo[icell].weight;
-    if (volume == 0.0) error->one(FLERR,"Collision cell volume is zero");
+    if (volume == 0.0) continue;
 
     // setup particle list for this cell
 
@@ -1185,7 +1185,7 @@ template < int GASTALLY > void Collide::collisions_group_ambipolar()
 
     ip = cinfo[icell].first;
     volume = cinfo[icell].volume / cinfo[icell].weight;
-    if (volume == 0.0) error->one(FLERR,"Collision cell volume is zero");
+    if (volume == 0.0) continue;
 
     // reallocate plist and p2g if necessary
 
